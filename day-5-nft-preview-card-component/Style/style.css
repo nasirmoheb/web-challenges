@@ -1,0 +1,112 @@
+:root {
+    --color-primary-soft-blue: hsl(215, 51%, 70%);
+    --color-primary-cyan: hsl(178, 100%, 50%);
+
+    --color-dark-blue-500: #0d192b;
+    --color-dark-blue-300: hsl(216, 50%, 16%);
+    --color-dark-blue-100: hsl(215, 32%, 27%);
+    --color-white: hsl(0, 0%, 100%);
+
+    --font-size-paragraph: 1.8rem;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: var(--color-dark-blue-500);
+    font-family: sans-serif;
+}
+
+.margin-r-small {
+    margin-right: .5rem;
+}
+
+.margin-r-medium {
+    margin-right: 1rem;
+}
+
+
+.js-space {
+    justify-content: space-between;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+}
+
+
+.line {
+    height: 1px;
+    background-color: var(--color-dark-blue-100);
+    margin: 1.5rem 0;
+}
+
+.card {
+    width: 25rem;
+    background-color: var(--color-dark-blue-300);
+    padding: 2rem;
+    border-radius: 1em;
+    color: var(--color-primary-soft-blue);
+    box-shadow: 0 2rem 0rem 2rem #0c1829;
+}
+
+.card-image {
+    width: 100%;
+    border-radius: 1em;
+    margin-bottom: 1.5rem;
+}
+
+.card-head {
+    color: var(--color-white);
+    margin-bottom: 1.5rem;
+}
+
+.card-desc {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    margin-bottom: 1.5rem;
+}
+
+.card-icon {
+    height: 1.2rem;
+}
+
+.card-avator {
+    width: 2.5rem;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+.card-creator-name {
+    color: var(--color-white);
+    font-weight: lighter;
+}
+
+.attribution {
+    text-align: center;
+    margin: 2rem;
+    font-size: 2rem;
+    line-height: 3rem;
+    color: var(--color-primary-soft-blue);
+}
+
+.attribution a {
+    color: var(--color-primary-cyan);
+}
