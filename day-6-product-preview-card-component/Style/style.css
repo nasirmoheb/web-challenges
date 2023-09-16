@@ -1,0 +1,154 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-dark-cyan: hsl(158, 36%, 37%);
+    --color-cream: hsl(30, 38%, 92%);
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+
+    --font-family-head: Montserrat, sans-serif;
+    --font-weight-head-big: 700;
+    --font-weight-head-medium: 500;
+    --font-family-paraghaph: Fraunces, sans-serif;
+    --font-weight-paragraph-big: 700;
+
+    --font-size-paragraph: 1.4rem;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+
+body {
+    background-color: var(--color-cream);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    max-width: 50rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    background-color: var(--white);
+}
+
+
+.card-image-container {
+    width: 50%;
+}
+
+.card-image {
+    width: 100%;
+
+}
+
+.card-details {
+    width: 50%;
+    padding: 2.5rem;
+}
+
+.card-head {
+    font-family: var(--font-family-head);
+    font-weight: var(--font-weight-head-medium);
+    font-size: 1rem;
+    letter-spacing: .5rem;
+    text-transform: uppercase;
+    color: var(--color-dark-cyan);
+    margin-bottom: 1.5rem;
+}
+
+.card-name {
+    font-size: 3rem;
+    line-height: 2.8rem;
+    color: var(--very-dark-blue);
+    margin-bottom: 1.5rem;
+}
+
+.card-desc {
+    font-size: var(--font-size-paragraph);
+    font-family: var(--font-family-paraghaph);
+    color: var(--color-dark-cyan);
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    color: var(--dark-grayish-blue);
+    margin-bottom: 1.5rem;
+}
+
+.card-price {
+    font-size: 3rem;
+    font-weight: var(--font-weight-head-big);
+    margin-right: 1rem;
+}
+
+.card-discount {
+    text-decoration: line-through;
+    font-size: 1.2rem;
+}
+
+.btn {
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--white);
+    padding: .8em 2em;
+    width: 100%;
+    text-align: center;
+    background-color: var(--dark-grayish-blue);
+    border-radius: .5em;
+    transition: all .5s;
+    font-family: var(--font-family-paraghaph);
+}
+
+.btn-icon {
+    height: 1em;
+    margin-right: .5em;
+    margin-bottom: -.2em;
+}
+
+.btn:hover {
+    background-color: var(--very-dark-blue);
+}
+
+@media (max-width:500px) {
+    html {
+        font-size: .8rem;
+    }
+
+    .card {
+        flex-direction: column;
+        margin: 1rem;
+    }
+
+    .card-image-container {
+        width: 100%;
+    }
+
+    .card-details {
+        width: 100%;
+    }
+}
+
+.attribution{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
