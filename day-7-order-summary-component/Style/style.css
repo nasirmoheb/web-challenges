@@ -1,0 +1,134 @@
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    background: url(./../images/pattern-background-desktop.svg), var(--pale-blue);
+    background-position: bottom;
+    background-size: cover;
+    font-family: sans-serif;
+    color: var(--dark-blue);
+}
+
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card {
+    width: 350px;
+    border-radius: 2rem;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 10px 10px 0px var(--pale-blue);
+}
+
+.card-image {
+    width: 100%;
+}
+
+.card-details {
+    padding: 3rem;
+    text-align: center;
+}
+
+.card-head {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.card-desc {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: var(--desaturated-blue);
+    margin-bottom: 1.5rem;
+}
+
+.plan-container {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: var(--very-pale-blue);
+    border-radius: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.plan-icon {
+    width: 4rem;
+    margin-right: 1rem;
+}
+
+.plan-head {
+    font-size: 1.4rem;
+    margin-bottom: .5rem;
+}
+
+.plan-price {
+    font-size: 1.5rem;
+    font-weight: 100;
+    color: var(--desaturated-blue);
+}
+
+.plan-change {
+    margin-left: auto;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.btn {
+    display: block;
+    text-decoration: none;
+    padding: 1.1rem;
+    font-size: 1.2rem;
+    border-radius: .5em;
+    color: var(--desaturated-blue);
+    font-weight: bold;
+    transition: all .5s;
+}
+
+.btn-secondary:hover {
+    color: var(--dark-blue);
+}
+
+.btn:not(:last-child) {
+    margin-bottom: 1.5rem;
+}
+
+.btn-primary {
+    background-color: var(--bright-blue);
+    color: white;
+    box-shadow: 0 5px 10px 5px var(--pale-blue);
+}
+
+.btn-primary:hover {
+    background-color: var(--desaturated-blue);
+}
+
+@media (max-width:600px) {
+    .card {
+        margin: 1rem;
+    }
+
+    body {
+        background: url(./../images/pattern-background-mobile.svg), var(--pale-blue);
+    }
+}
