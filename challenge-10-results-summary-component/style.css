@@ -1,0 +1,223 @@
+@font-face {
+    font-family: 'HankenGrotesk';
+    font-display: swap;
+    font-weight: 100 900;
+    src: url(./assets/fonts/HankenGrotesk-VariableFont_wght.ttf) format('truetype');
+}
+
+:root {
+    --light-red-hsl: 0, 100%, 67%;
+    --orangey-yellow-hsl: 39, 100%, 56%;
+    --green-teal-hsl: 166, 100%, 37%;
+    --obalt-blue-hsl: 234, 85%, 45%;
+
+    --light-red: hsl(var(--light-red-hsl));
+    --orangey-yellow: hsl(var(--orangey-yellow-hsl));
+    --green-teal: hsl(var(--green-teal-hsl))%;
+    --obalt-blue: hsl(var(--obalt-blue-hsl));
+
+    --gradient-primary: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    --gradient-to-transparent: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+
+    --White: hsl(0, 0%, 100%);
+    --pale-blue: hsl(221, 100%, 96%);
+    --light-lavender: hsl(241, 100%, 89%);
+    --dark-gray-blue: hsl(224, 30%, 27%);
+
+
+    --font-family-default: 'HankenGrotesk';
+    --fw-regular: 500;
+    --fw-bold: 700;
+    --fw-black: 800;
+
+    --fs-400: 1.8rem;
+    --fs-500: 2rem;
+    --fs-600: 2.4rem;
+    --fs-700: 2.8rem;
+    --fs-800: 3.2rem;
+    --fs-900: 8rem;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+
+    font-family: var(--font-family-default);
+    font-size: var(--fs-400);
+    color: var(--dark-gray-blue);
+}
+
+
+@media (min-width:600px) {
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+}
+
+
+.result-summary {
+    max-width: 76rem;
+    --border-radius: 3rem;
+    background-color: var(--White);
+}
+
+
+
+@media (min-width:600px) {
+    .result-summary {
+        display: flex;
+        border-radius: var(--border-radius);
+        box-shadow: .5rem 1rem 3rem hsla(var(--obalt-blue-hsl), 0.1);
+        margin-inline: 1rem;
+
+    }
+}
+
+.result {
+    flex: 1;
+    background: var(--gradient-primary);
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    padding: 2rem;
+    text-align: center;
+    color: var(--pale-blue);
+}
+
+
+.title {
+    font-size: var(--fs-600);
+    color: var(--pale-blue);
+    font-weight: var(--fw-regular);
+    margin-top: 1rem;
+}
+
+.result-score {
+    background: var(--gradient-to-transparent);
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    width: 20rem;
+    text-align: center;
+    color: var(--pale-blue);
+    margin: 0 auto;
+    margin-top: 3rem;
+}
+
+.result-score span {
+    display: block;
+    font-size: var(--fs-900);
+    color: var(--White);
+    font-weight: var(--fw-black);
+    padding-top: 3rem;
+
+}
+
+.result-rank {
+    font-size: var(--fs-700);
+    font-weight: var(--fw-bold);
+    color: var(--White);
+    margin: 1.5rem auto;
+}
+
+.result-desc {
+    margin: 2rem;
+    text-align: center;
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-400);
+}
+
+@media (min-width:600px) {
+    .result {
+        border-radius: var(--border-radius);
+    }
+}
+
+.summary {
+    flex: 1;
+    padding: 2rem;
+    margin: 0 2rem;
+}
+
+.summary-title {
+    color: var(--dark-gray-blue);
+    font-weight: var(--fw-bold);
+    margin-bottom: 2rem;
+}
+
+.summary-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+    margin: 1.5rem 0;
+    border-radius: 1rem;
+}
+
+
+.flex-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex-group svg {
+    margin-right: 1rem;
+}
+
+.summary-score {
+    color: #949494;
+}
+
+
+
+.summary-score span {
+    font-weight: var(--fw-bold);
+    color: var(--dark-gray-blue);
+}
+
+.item-1 {
+    background-color: hsla(var(--light-red-hsl), .1);
+    color: var(--light-red);
+}
+
+.item-2 {
+    background-color: hsla(var(--orangey-yellow-hsl), .1);
+    color: var(--orangey-yellow);
+}
+
+.item-3 {
+    background-color: hsla(var(--green-teal-hsl), .1);
+    color: var(--green-teal);
+}
+
+.item-4 {
+    background-color: hsla(var(--obalt-blue-hsl), .1);
+    color: var(--obalt-blue);
+}
+
+.btn {
+    padding: 1.5rem 3rem;
+    border: none;
+    border-radius: 25rem;
+    width: 100%;
+    font-size: var(--fs-400);
+    font-weight: var(--fw-bold);
+    background-color: var(--dark-gray-blue);
+    color: var(--pale-blue);
+    margin-top: 1.5rem;
+    /* transition: all .5s; */
+}
+
+.btn:hover {
+    cursor: pointer;
+    background: var(--gradient-primary);
+}
