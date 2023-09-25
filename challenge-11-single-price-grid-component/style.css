@@ -1,0 +1,149 @@
+:root {
+    --Cyan: hsl(179, 62%, 43%);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+
+    --fs-300: 1.4rem;
+    --fs-400: 1.6rem;
+    --fs-500: 1.8rem;
+    --fs-600: 2rem;
+    --fs-700: 2.4rem;
+    --fs-800: 3.2rem;
+    --fs-900: 5.2rem;
+
+    --font-family-default: 'Karla, sans-serif';
+    --fw-regular: 400;
+    --fw-bold: 700;
+    --fw-black: 900;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: var(--fs-400);
+    background-color: var(--Light-Gray);
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.price-card {
+    --pading-size: 4rem 3rem;
+    max-width: 76rem;
+    background-color: white;
+    box-shadow: .5rem 2rem 2rem var(--Light-Gray);
+    border-radius: 1rem;
+    overflow: hidden;
+    margin: 2rem;
+}
+
+.btn {
+    font-size: var(--fs-400);
+    font-weight: var(--fw-bold);
+    padding: 1rem 3rem;
+    border: none;
+    background-color: var(--Bright-Yellow);
+    color: var(--Light-Gray);
+    width: 100%;
+    border-radius: .5rem;
+    box-shadow: .5rem 1rem 1rem var(--Cyan);
+    transition: all .5s;
+}
+
+.btn:hover {
+    cursor: pointer;
+    filter: brightness(1.1);
+}
+
+.header {
+    padding: var(--pading-size);
+}
+
+.header-title {
+    font-size: var(--fs-700);
+    font-weight: var(--fw-bold);
+    color: var(--Cyan);
+    margin-bottom: 2rem;
+}
+
+.header-title-desc {
+    font-size: var(--fs-500);
+    color: var(--Bright-Yellow);
+    margin-bottom: 1.5rem;
+}
+
+.header-desc {
+    line-height: 1.7;
+    color: var(--Grayish-Blue);
+}
+
+@media (min-width:600px) {
+    .flex-group {
+        display: flex;
+        /* justify-content: space-between; */
+    }
+}
+
+.price {
+    background-color: var(--Cyan);
+    padding: var(--pading-size);
+    flex: 1;
+    color: var(--Light-Gray);
+}
+
+.price-month {
+    font-size: var(--fs-700);
+    margin-bottom: 1rem;
+}
+
+.price-month span {
+    color: var(--Grayish-Blue);
+    font-size: var(--fs-400);
+}
+
+.price-desc {
+    font-size: var(--fs-300);
+    margin-bottom: 2rem;
+}
+
+.section-title {
+    font-size: var(--fs-500);
+    color: var(--Light-Gray);
+    margin-bottom: 1.5rem;
+    font-weight: var(--fw-bold);
+}
+
+
+.desc {
+    background-color: var(--Grayish-Blue);
+    padding: var(--pading-size);
+    flex: 1;
+    color: var(--Light-Gray);
+}
+
+.desc-list {
+    list-style: none;
+}
+
+.desc-list-item {
+    line-height: 1.4;
+    font-size: var(--fs-300);
+}
+
+.attribution {
+    text-align: center;
+}
