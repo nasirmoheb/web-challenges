@@ -1,0 +1,217 @@
+:root {
+    --Very-Dark-Magenta: hsl(300, 43%, 22%);
+    --Soft-Pink: hsl(333, 80%, 67%);
+    --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+    --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+
+    --fs-400: 1.5rem;
+    --fs-500: 1.8rem;
+    --fs-600: 2rem;
+    --fs-700: 2.4rem;
+    --fs-800: 3.2rem;
+    --fs-900: 4.2rem;
+
+
+    --font-family-default: 'League Spartan , sans-serif';
+
+    --fw-regular: 400;
+    --fw-bold: 500;
+    --fw-black: 700;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: sans-serif;
+    /* font-family: var(--font-family-default); */
+    font-size: var(--fs-400);
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+
+.social-proof {
+    padding: 4rem 2rem;
+    max-width: 120rem;
+}
+
+.flex-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header {
+    flex: 1;
+    margin-bottom: 5rem;
+}
+
+.title {
+    font-size: var(--fs-900);
+    font-weight: var(--fw-black);
+    line-height: 1;
+    color: var(--Very-Dark-Magenta);
+    max-width: 15ch;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+.title-desc {
+    color: var(--Dark-Grayish-Magenta);
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+.review {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.review-item {
+    padding: 1.5rem 2rem;
+    background-color: var(--Light-Grayish-Magenta);
+    margin-bottom: 1.5rem;
+    border-radius: .5em;
+    --margin-right: 4rem;
+    width: 100%;
+    text-align: center;
+}
+
+
+@media (min-width:600px) {
+
+    .flex-head {
+        display: flex;
+    }
+
+    .title {
+        text-align: left;
+        margin-left: 0;
+    }
+
+    .title-desc {
+        max-width: 40rem;
+        text-align: left;
+        margin-left: 0;
+    }
+
+    .review {
+        max-width: 37rem;
+    }
+
+    .review-item-1 {
+        margin-right: calc(2 * var(--margin-right));
+    }
+
+    .review-item-2 {
+        margin-right: calc(1 * var(--margin-right));
+    }
+
+    .review-item-3 {
+        margin-right: calc(0 * var(--margin-right));
+    }
+}
+
+.reviw-title {
+    font-size: var(--fs-400);
+    flex: 1;
+    color: var(--Very-Dark-Magenta);
+}
+
+.star-images {
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+    flex-wrap: nowrap;
+}
+
+.star-images img {
+    width: 1.5rem;
+}
+
+.card {
+
+    background-color: var(--Very-Dark-Magenta);
+    padding: 4rem 3rem;
+    border-radius: .5em;
+    margin-bottom: 1rem;
+}
+
+
+
+
+@media (min-width:600px) {
+
+    .star-images {
+        margin-bottom: 0;
+    }
+
+    .card:not(:last-child) {
+        margin-right: 3rem;
+
+    }
+
+    .card-footer {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .card {
+        max-width: 35rem;
+    }
+
+    .card-2 {
+        margin-top: 3rem;
+    }
+
+    .card-3 {
+        margin-top: 6rem;
+    }
+}
+
+
+
+
+
+
+.card-image {
+    width: 4rem;
+    border-radius: 50%;
+    margin-right: 2rem;
+}
+
+.card-info {
+    justify-content: flex-start;
+    align-items: center;
+    color: var(--Light-Grayish-Magenta);
+    margin-bottom: 2rem;
+}
+
+.position {
+    font-weight: var(--fw-regular);
+    color: var(--Soft-Pink);
+    margin-top: .5rem;
+}
+
+.quote {
+    font-weight: var(--fw-bold);
+    color: var(--Light-Grayish-Magenta);
+}
