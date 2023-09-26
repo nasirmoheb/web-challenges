@@ -1,0 +1,141 @@
+:root {
+    --Very-dark-blue: hsl(233, 47%, 7%);
+    --Dark-desaturated-blue: hsl(244, 38%, 16%);
+    --Soft-violet: hsl(277, 64%, 61%);
+
+    --White: hsl(0, 0%, 100%);
+    --Slightly-transparent-white: hsla(0, 0%, 100%, 0.75);
+    --Slightly-transparent-white-stat: hsla(0, 0%, 100%, 0.6);
+
+    --fs-400: 1.5rem;
+    --fs-500: 1.8rem;
+    --fs-600: 2.4rem;
+    --fs-700: 3.2rem;
+    --fs-800: 4.2rem;
+
+    --fw-regular: 400;
+    --fw-bold: 600;
+    --fw-black: 700;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: var(--Very-dark-blue);
+    color: var(--White);
+    font-family: sans-serif;
+}
+
+img {
+    width: 100%;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.card {
+    display: flex;
+    background-color: var(--Dark-desaturated-blue);
+    border-radius: 1em;
+    max-width: 96rem;
+    overflow: hidden;
+}
+
+.card-stats {
+    /* flex: 1; */
+    padding: 5rem;
+    max-width: 48rem;
+}
+
+.card-head {
+    font-size: var(--fs-700);
+    margin-bottom: 2rem;
+}
+
+.card-head span {
+    color: var(--Soft-violet);
+}
+
+.card-desc {
+    font-size: var(--fs-400);
+    line-height: 1.7;
+    color: var(--Slightly-transparent-white);
+    margin-bottom: 6rem;
+}
+
+
+.flex-group {
+    display: flex;
+}
+
+.stats {
+    font-size: var(--fs-400);
+    margin-right: 5rem;
+    color: var(--Slightly-transparent-white);
+}
+
+.stats span {
+    display: block;
+    font-size: var(--fs-500);
+    font-weight: var(--fw-bold);
+    color: var(--White);
+}
+
+
+.card-image {
+    flex: 1;
+    width: 48rem;
+    background-image: linear-gradient(hsla(277, 64%, 61%, 0.61), hsla(277, 64%, 61%, 0.582)), url(./images/image-header-desktop.jpg);
+    background-size: cover;
+
+}
+
+
+@media (max-width:600px) {
+    .card {
+        flex-direction: column-reverse;
+        margin: 1rem;
+        text-align: center;
+    }
+
+    .card-stats {
+        padding: 3rem 2rem;
+    }
+
+    .card-image {
+        background-image: linear-gradient(hsla(277, 64%, 61%, 0.61), hsla(277, 64%, 61%, 0.582)), url(./images/image-header-mobile.jpg);
+        background-size: cover;
+        min-height: 30rem;
+    }
+
+    .flex-group {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .stats {
+        margin: 0 auto;
+        margin-bottom: 2rem;
+        font-size: var(--fs-500);
+    }
+
+    .stats span{
+        font-size: var(--fs-700);
+    }
+}
+
+.attribution{
+    text-align: center;
+}
