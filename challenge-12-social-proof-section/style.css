@@ -42,6 +42,36 @@ main {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    position: relative;
+}
+
+main::before {
+    content: "";
+    position: absolute;
+    background-image: url(./images/bg-pattern-top-desktop.svg);
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+
+main::after {
+    content: "";
+    position: absolute;
+    background-image: url(./images/bg-pattern-bottom-desktop.svg);
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+
+@media (max-width:600px) {
+    main::before {
+        background-image: url(./images/bg-pattern-top-mobile.svg);
+    }
+
+    main::after {
+        background-image: url(./images/bg-pattern-bottom-mobile.svg);
+    }
 }
 
 
