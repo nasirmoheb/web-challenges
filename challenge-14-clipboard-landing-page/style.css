@@ -84,6 +84,14 @@ body {
     line-height: 1.5;
 }
 
+a {
+    transition: all .2s;
+}
+
+a:hover {
+    opacity: .7;
+}
+
 
 .hero {
     padding: var(--p-900) 0;
@@ -115,7 +123,7 @@ body {
     text-decoration: none;
     color: var(--clr-neutral-100);
     padding: var(--p-400) var(--p-600);
-    margin-inline: 1rem;
+    margin: 1rem;
     border-radius: 2em;
     transition: all .2s;
     font-weight: var(--fw-bold);
@@ -136,6 +144,19 @@ body {
     box-shadow: 0 .3rem .1rem hsl(233, 74%, 62%);
 }
 
+@media(max-width:600px) {
+    .btn {
+        display: block;
+        margin-bottom: var(--m-600);
+    }
+}
+
+@media (max-width:375px) {
+    .hero {
+        background-image: url(./images/bg-header-mobile.png);
+    }
+}
+
 
 .features {}
 
@@ -154,22 +175,148 @@ body {
 }
 
 
+.feature--small {
+    max-width: 25ch;
+    margin-bottom: var(--m-700);
+    text-align: center;
+}
+
+.feature-title--small {
+    color: var(--clr-neutral-500);
+    margin-bottom: var(--m-300);
+}
+
+.feature-desc--small {
+    color: var(--clr-neutral-400);
+    font-size: var(--fs-200);
+    font-weight: var(--fw-regular);
+}
 
 
+.flex-group {
+    --padding: 2rem;
+    --max-width: 100rem;
+    width: min(var(--max-width), 100% - (var(--padding)*2));
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    text-align: center;
+    margin: var(--m-800) auto;
+}
+
+.flex-group .feature-icon {
+    margin-inline: auto;
+    width: 3rem;
+    margin-bottom: var(--m-500);
+}
 
 
+.flex-item {
+    display: block;
+}
+
+.flex-item-inline {
+    flex-basis: 10rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-item a {
+    display: block;
+    text-decoration: none;
+    color: var(--clr-neutral-500);
+    margin-bottom: var(--p-400);
+    text-align: left;
+}
+
+.company {
+    --padding: 2rem;
+    --max-width: 100rem;
+    width: min(var(--max-width), 100% - (var(--padding)*2));
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: var(--m-800) auto;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.company img {
+    margin: var(--m-500);
+}
+
+.cta {
+    margin: var(--m-900);
+}
 
 
+.footer {
+    background-color: var(--clr-neutral-100);
+    padding: var(--p-300);
+    text-align: center;
+}
+
+.footer-logo {
+
+    width: 4rem;
+}
+
+.justify-content {
+    justify-content: space-around;
+}
 
 
+@media(max-width:600px) {
+    .flex-group {
+        flex-direction: column;
+    }
+
+    .flex-item {
+        margin-inline: auto;
+        text-align: center;
+    }
+
+    .flex-group .feature-icon {
+        width: 5rem;
+    }
+
+    .feature--small {
+        margin-inline: auto;
+    }
+
+    .company {
+        flex-direction: column;
+    }
+
+    .company img {
+        margin-bottom: var(--m-700);
+    }
+
+    .cta {
+        margin: 0;
+        margin-bottom: var(--m-900);
+    }
+
+    .footer .flex-group {
+        flex-direction: column;
+        align-items: center;
+    }
 
 
+    .footer-logo {
+        margin-bottom: var(--m-700);
+    }
 
+    .flex-item .footer-link {
+        text-align: center;
+        margin-bottom: var(--m-700);
+    }
 
-
-
-
-
+    .flex-item-inline {
+        width: 15rem;
+        margin-top: var(--m-600);
+    }
+}
 
 
 
@@ -177,7 +324,7 @@ body {
 
 .container {
     --max-width: 76rem;
-    --padding: 1rem;
+    --padding: 2rem;
     width: min(var(--max-width), 100% - (var(--padding)*2));
     margin-inline: auto;
     text-align: center;
@@ -185,9 +332,40 @@ body {
 
 .even-columns {
     display: flex;
+    align-items: center;
+    margin-bottom: var(--m-800);
+}
+
+.col {
+    width: 50%;
 }
 
 .col-1 {
-    width: 50%;
-    margin-left: -1rem;
+    margin-left: -3rem;
+    margin-right: 3rem;
+}
+
+.col-2 {
+    padding: var(--p-700);
+    align-self: flex-start;
+}
+
+@media(max-width:600px) {
+    .even-columns {
+        flex-direction: column;
+    }
+
+    .col {
+        --max-width: 76rem;
+        --padding: 2rem;
+        width: min(var(--max-width), 100% - (var(--padding)*2));
+    }
+
+    .col-1 {
+        margin-inline: auto;
+    }
+
+    .col-2 {
+        margin-inline: auto;
+    }
 }
