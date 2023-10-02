@@ -91,7 +91,7 @@ main {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-
+    margin-inline: var(--m-200);
 }
 
 .data-storage {
@@ -214,4 +214,47 @@ main {
     display: flex;
     justify-content: space-between;
     font-weight: var(--fw-bold);
+}
+
+
+@media (max-width:600px) {
+
+    body {
+        background: url('./images/bg-mobile.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom;
+    }
+
+    .data-storage {
+        flex-direction: column;
+    }
+
+    .data-storage-icons {
+        flex-basis: 0;
+        width: 100%;
+    }
+
+    .icons {
+        margin-top: var(--m-600);
+    }
+
+    .data-storage-desc {
+        flex-basis: 0;
+    }
+
+    .progress {
+        margin-bottom: var(--m-300);
+    }
+
+    .info {
+        top: 80%;
+        right: 50%;
+        transform: translateX(50%);
+        border-radius: .5em;
+    }
+
+    .info::after {
+        display: none;
+    }
 }
