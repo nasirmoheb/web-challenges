@@ -1,0 +1,306 @@
+:root {
+
+    --clr-primary-100: hsl(321, 100%, 78%);
+    --clr-primary-300: hsl(322, 100%, 66%);
+    --clr-primary-500: hsl(0, 100%, 63%);
+
+
+    --clr-neutral-100: hsl(207, 100%, 98%);
+    --clr-neutral-900: hsl(192, 100%, 9%);
+
+    --ff-head: 'Poppin', sans-serif;
+    --ff-body: 'Open Sans', sans-serif;
+
+    --fw-regular: 400;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+
+    --fs-100: 1.2rem;
+    --fs-200: 1.4rem;
+    --fs-300: 1.6rem;
+    --fs-400: 1.8rem;
+    --fs-500: 2rem;
+    --fs-600: 2.4rem;
+    --fs-700: 3rem;
+    --fs-800: 4rem;
+}
+
+@font-face {
+    font-family: Poppin;
+    src: url(./assets/fonts/Poppins-SemiBold.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url(./assets/fonts/OpenSans-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url(./assets/fonts/OpenSans-Bold.ttf);
+    font-weight: 700;
+}
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+
+body {
+    box-sizing: border-box;
+    font-family: var(--ff-body);
+    font-weight: var(--fw-regular);
+    color: var(--clr-neutral-900);
+    font-size: var(--fs-400);
+}
+
+.container {
+    max-width: 120rem;
+    padding-inline: 2rem;
+    margin: 0 auto;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 4rem auto 7rem;
+}
+
+.navbar-brand {
+    height: 2rem;
+}
+
+.btn {
+    text-decoration: none;
+    color: var(--clr-primary-300);
+    font-family: var(--ff-head);
+    font-weight: var(--fw-bold);
+    display: inline-block;
+    padding: .5em 2em;
+    border-radius: 2em;
+    transition: all .2s;
+}
+
+.btn:hover {
+    opacity: .8;
+}
+
+.btn-primary {
+    background-color: var(--clr-primary-300);
+    color: var(--clr-neutral-100);
+    text-align: center;
+    font-size: var(--fs-300);
+    padding: .7em 3em;
+
+    margin: 4rem auto;
+}
+
+.btn-secondary {
+    border: 2px solid var(--clr-primary-300);
+    font-size: var(--fs-100);
+}
+
+.hero {
+    text-align: center;
+}
+
+.hero-title {
+    font-size: var(--fs-700);
+    text-align: center;
+    font-family: var(--ff-head);
+    font-weight: var(--fw-bold);
+    margin: 4rem 0;
+}
+
+
+.hero-desc {
+    font-size: var(--fs-400);
+    max-width: 50ch;
+    margin: 0 auto;
+}
+
+.hero-image {
+    width: 100%;
+}
+
+.hero-stats {}
+
+.stat {
+    text-align: left;
+    margin: 4rem;
+    display: inline-block;
+}
+
+.stat img {
+    width: 2rem;
+}
+
+.stat .bold {
+    font-size: 7rem;
+    font-weight: var(--fw-bold);
+}
+
+.stat p:last-child {
+    font-size: var(--fs-400);
+    text-align: center;
+    color: var(--clr-primary-100);
+}
+
+
+.curve-img img {
+    width: 100%;
+    display: block;
+}
+
+
+.feature {
+    margin-bottom: 7rem;
+}
+
+.feature-inner {
+    background-color: var(--clr-neutral-100);
+    padding: 3rem 0;
+}
+
+
+.feature-image {
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+
+.feature-title {
+    font-size: var(--fs-600);
+    margin-bottom: 1rem;
+}
+
+.feature-desc {
+    font-size: var(--fs-400);
+}
+
+
+@media (min-width:600px) {
+    .flex {
+        display: flex;
+        gap: 3rem;
+        align-items: center;
+    }
+
+    .feature-image {
+        width: 50%;
+    }
+
+    .reverse {
+        order: -1
+    }
+
+    .navbar-brand {
+        height: 3rem;
+    }
+
+    .btn-secondary {
+        font-size: var(--fs-400);
+    }
+}
+
+
+.cta {
+    text-align: center;
+    margin: 8rem 0;
+}
+
+
+.footer>div {
+    background-color: var(--clr-neutral-900);
+    color: var(--clr-neutral-100);
+    padding: 8rem 0;
+}
+
+.footer-logo {
+    height: 3rem;
+    margin-bottom: 1rem;
+}
+
+.footer-logo+p {
+    margin-bottom: 1rem;
+}
+
+
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    vertical-align: middle;
+    margin-bottom: 1rem;
+}
+
+.footer .flex {
+    justify-content: space-between;
+}
+
+.footer h2 {
+    margin-bottom: 1rem;
+}
+
+.footer form {
+    margin: 4rem 0;
+}
+
+.footer form input,
+.footer form button {
+    width: 100%;
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+}
+
+
+.footer form button {
+    background-color: var(--clr-primary-300);
+    color: var(--clr-neutral-100);
+    border-color: transparent;
+    border-radius: .2em;
+}
+
+
+
+@media (min-width:600px) {
+    .footer .flex{
+        align-items: flex-start;
+    }
+    .footer .flex div {
+        width: 40%;
+    }
+
+    .footer form input,
+    .footer form button {
+        width: fit-content;
+    }
+
+}
+
+
+
+
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
